@@ -1,0 +1,411 @@
+/* Start Main Rules */
+$mainColor : #2D89E6;
+$Sub-color:#C3C3C3;
+$fontSize:12px;
+
+
+
+
+
+
+body {
+
+    font: 15px/1.5 Segoe UI ;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    direction: ltr;
+    
+}
+
+.container {
+
+    width:100%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+/* End Main Rules */
+
+/* Start Header */
+
+header {
+
+    height: 48px;
+    background: $mainColor;
+    overflow: hidden;
+    .titles {
+
+        color: white;
+        font-size:9px;
+        text-align: center;
+        
+    }
+    
+    
+}
+
+ 
+/* End Header */
+
+/* Start Content */
+
+.content {
+
+    width: 100%;
+    .main-form {
+
+        width: 24%;
+        border: 1px solid $Sub-color;
+        border-radius: 25px;
+        float: left;
+        text-align: center;
+        margin-left: 86px;
+        overflow: hidden;
+        margin-top: 25px;
+
+        h2 {
+
+            color: #707070;
+            padding-bottom: 0;
+            margin-bottom: 13px;
+            margin-top: 13px;
+            font-size: $fontSize+1;
+
+        }
+
+        form {
+    
+            overflow: hidden;
+
+        }
+
+        input[type="text"],
+        input[type="email"]  {
+
+            display: block;
+            width: 280px;
+            height: 34px;
+            margin: 8px 18px ;
+            border: 1px solid $Sub-color;
+            border-radius: 10px;
+            padding: 1.5px;
+            padding-left: 10px;
+            color: #AEAEAE;  
+    
+        }
+
+        select {
+
+            display: block;
+            width: 294px;
+            height: 40px;
+            margin: 8px 18px ;
+            border: 1px solid $Sub-color;
+            border-radius: 10px;
+            padding: 2px;
+            padding-left: 10px;
+            color: rgb(83, 82, 82);
+        
+        }
+
+        textarea {
+
+            display: block;
+            width: 279px;
+            height: 150px;
+            margin: 8px 18px ;
+            border: 1px solid $Sub-color;
+            border-radius: 10px;
+            padding:2px ;
+            padding-left: 10px;
+            padding-top: 12pX;
+            color: #AEAEAE;
+            
+            
+        }
+
+        .condition {
+
+            margin-left: -83px;
+            font-size: $fontSize;
+            margin-top: 13px;
+        }
+        
+        
+        label input {
+
+            display: none; 
+        }
+          
+        
+        label span {
+
+            height: 10px;
+            width: 10px;
+            border: 1px solid $Sub-color;
+            display: inline-block;
+            position: relative;
+            margin-right: 3px;
+        
+        }
+          
+        [type=checkbox]:checked + span:before {
+            content: '\2714';
+            position: absolute;
+            top: -5px;
+            left: 0;
+        }
+
+        input[type="number"] {
+    
+            width: 40px;
+            height: 15px;
+            border: 1px solid $Sub-color;
+            margin-bottom: 20px;
+            margin-left: 3px;
+        
+        }
+
+        button {
+
+            background: $mainColor;
+            color: white;
+            border: none;
+            width: 100%;
+            height: 44px;
+            margin-top: 18px;
+            font-weight:bold;
+        
+        } 
+        
+    }
+    .view  {
+
+        width: 61.5%;
+        float: right;
+        background-color:#F6F6F6;
+        height: 575.7px;
+        margin-right: 86px;
+
+        .filters {
+
+            background-color: $mainColor;
+            border-right: 1px solid $mainColor;
+            border-radius: 0 20px 20px 0;
+            min-height: 35px;
+            width: 620px;
+            margin-top: 25px;
+            color: white;
+            font-size: $fontSize;
+
+            span {
+
+                margin-left: 30px;
+            }
+
+            .verticalLines {
+
+                border-left: 1px solid white;
+                height: 35px;
+                margin-left: 3px;
+                margin-right: 6px;
+            
+            }
+
+            .sortBy {
+
+                width: 50px;
+                height: 18px;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: #8B8B8B;
+                font-size: $fontSize;
+                margin-top: 9px;
+                margin-left: 3px;
+                
+            }
+
+            .major {
+
+                width: 85px;
+                height: 18px;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: #8B8B8B;
+                font-size: $fontSize;
+                margin-right: 6px;
+
+            }
+
+            .role {
+
+                width: 85px;
+                height: 18px;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: #8B8B8B;
+                font-size: $fontSize;
+                
+            }
+
+            
+            input[type="search"] {
+
+                width: 175px;
+                height: 18px;
+                border: 1px solid white;
+                border-radius: 5px;
+                color: #8B8B8B;
+                font-size: $fontSize;
+
+            }
+            
+        }
+
+        .numberOfItems {
+
+            background-color: $mainColor;
+            border-right: 1px solid $mainColor;
+            border-radius: 20px 0 0 20px;
+            height: 35px;
+            width: 70px;
+            float: right;
+            margin-top: 25px;
+
+            span {
+
+                color: white;
+                font-size: 12px;
+                margin-left: 10px;
+                margin-top: 7px;
+            
+            }
+            
+            
+        }
+
+        .listOfMemebers {
+
+            overflow: hidden;
+
+            .membersInfo {
+
+                overflow: hidden;
+                overflow: scroll;
+                height:  560px;
+                width: 100%;
+
+                .deleteImg {
+
+                    float: left;
+
+                    img {
+
+                        margin-top: 80px;
+                        margin-left: 10px;
+                        margin-right: 10px;
+                    
+                    }
+                    
+                    
+                }
+
+                h4 {
+
+                    margin-bottom: -8px;
+                    margin-top: 45px;
+
+                    a{
+
+                        text-decoration: none;
+                        color: black;
+                    
+                    }
+                    
+                }
+
+                .subInfo {
+
+                    font-size: $fontSize;
+                    font-weight: bold;
+                    color: $mainColor;
+                    
+                }
+
+                .info {
+
+                    float: right;
+                    font-size: $fontSize;
+                    color: #6A6A6A;
+                    width: 93.3%;
+                    margin-top: -6px;
+                    margin-bottom: 33px;
+                    word-wrap: break-word;
+                  
+                }
+                
+                
+                 
+            }
+            
+            
+        }
+        
+
+        
+    }
+    
+     
+
+}
+
+/* End Content */
+
+ 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
