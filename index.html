@@ -40,9 +40,9 @@
                 
                 <form>
                     
-                    <input type="text" placeholder="Name" />
-                    <input type="email" placeholder="Email"/>
-                    <select name="Major"> 
+                    <input id="format_for_first_input" type="text" placeholder="Name" />
+                    <input id="format_for_second_input" type="email" placeholder="Email"/>
+                    <select name="Major" id="major"> 
                         <option value="" disabled selected hidden>Major</option>
                         <option value="Computer Science">Computer Science</option>
                         <option value=" Computer Engineering"> Computer Engineering</option>
@@ -50,7 +50,7 @@
                         <option value="Information System ">Information System </option>
                     </select>
 
-                    <select name="Role"> 
+                    <select name="Role" id="role"> 
                         <option value="" disabled selected hidden>Role</option>
                         <option value="Front-End Developer">Front-End Developer</option>
                         <option value="Back-End Developer">Back-End Developer</option>
@@ -58,7 +58,7 @@
                         <option value="UI/UX Designer">UI/UX Designer</option>
                     </select>
 
-                    <textarea name="Biography" minlength="500" maxlength="1500" placeholder="Biography"></textarea>
+                    <textarea id="format_for_third_input"  name="Biography" minlength="500" maxlength="1500" placeholder="Biography"></textarea>
                     <div class="condition">
                         <label>
                             <input type='checkbox'>
@@ -127,7 +127,7 @@
                     <span class="verticalLines"></span>
 
 
-                    <input type="search" placeholder="Search by name..." />
+                    <input id="format_for_fourth_input" type="search" placeholder="Search by name..." />
 
 
                 </div>
@@ -139,49 +139,73 @@
                 <section class="listOfMemebers">
 
                    
-                    <section class="membersInfo">
+                    <ul class="membersInfo">
 
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Faris Abu3ram</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
+                        <li><a href="#" id="deleteImags" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a></li>
+                        <li><h4><a href="#" id="openModal">Faris Abu3ram</a></h4></li>
+                        <li class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</li>
+                        <li class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </li>
                   
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Ibrahim Abusamra</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
-                    
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Mohamd Alnatsha</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
-                
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Amir Altakroori</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
 
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Aseel Arafeh</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
-
-
-                        <a href="#" class="deleteImg"><img src="images/Delete.PNG" width="35px" height="35px"/></a>
-                        <h4><a href="#">Basil Atawneh</a></h4>
-                        <p class="subInfo">faris@pseu.com / Information Technology / Front-End Developer</p>
-                        <p class="info">of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing </p>
-
-                    </section>
+                    </ul>
     
                     
                 </section>
 
-                <!--Start Members Information -->
+                <!-- Start Members Information -->
 
             </section>
 
-            <!--End viewMembers-->
+            <!-- End viewMembers -->
+
+            <!-- Start Information Model -->
+
+            <div id="infoModal" class="informationModal">
+
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                      <div class="closeEdit"><span class="close">&times;</span></div>
+                        <input type="text" />
+                      </div>
+                      <div class="modal-body">
+
+                           <form class="updateInfo">
+                                <input type="email"/>
+            
+                                <select name="Major"> 
+                                    <option value="" disabled selected hidden>Major</option>
+                                    <option value="Computer Science">Computer Science</option>
+                                    <option value=" Computer Engineering"> Computer Engineering</option>
+                                    <option value="Information Technology ">Information Technology </option>
+                                    <option value="Information System ">Information System </option>
+                                </select>
+                    
+                                <select name="Role"> 
+                                    <option value="" disabled selected hidden>Role</option>
+                                    <option value="Front-End Developer">Front-End Developer</option>
+                                    <option value="Back-End Developer">Back-End Developer</option>
+                                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                </select>
+            
+                                <textarea  name="Biography" minlength="500" maxlength="1500" placeholder="Biography"></textarea>
+
+                           </form>
+            
+                        
+                      </div>
+                      <div class="modal-footer">
+                        <button>DELETE</button>
+                        <button>SAVE</button>
+                        <button>CANCEL</button>
+                      </div>
+                    </div>
+                  
+            </div>
+            
+            <!-- End Information Model -->
+
 
             </div>
 

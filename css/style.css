@@ -142,7 +142,7 @@ header .titles {
   width: 61.5%;
   float: right;
   background-color: #F6F6F6;
-  height: 575.7px;
+  height: 576px;
   margin-right: 86px;
 }
 
@@ -233,6 +233,8 @@ header .titles {
   overflow: scroll;
   height: 560px;
   width: 100%;
+  list-style: none;
+  margin-left: -37px;
 }
 
 .content .view .listOfMemebers .membersInfo .deleteImg {
@@ -246,7 +248,7 @@ header .titles {
 }
 
 .content .view .listOfMemebers .membersInfo h4 {
-  margin-bottom: -8px;
+  margin-bottom: 5px;
   margin-top: 45px;
 }
 
@@ -266,9 +268,71 @@ header .titles {
   font-size: 12px;
   color: #6A6A6A;
   width: 93.3%;
-  margin-top: -6px;
+  margin-top: -22px;
   margin-bottom: 33px;
   word-wrap: break-word;
+}
+
+/* The Modal (background) */
+.informationModal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #fefefe;
+  border-radius: 20px;
+  width: 60%;
+}
+
+/* The Close Button */
+.closeEdit {
+  background: black;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  float: left;
+  overflow: hidden;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.close {
+  color: #fefefe;
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: 7px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* End Content */
